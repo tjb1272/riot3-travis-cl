@@ -1,10 +1,10 @@
-const request = require('supertest');
-const app = require('../app.js');
+var assert = require('assert');
 
-describe('GET /', () => {
-    it('should return 200 OK', (done) => {
-        request(app)
-            .get('/index')
-            .expect(200, done);
+describe('Math', function() {
+    it('should test if 3*3 = 9', function() {
+        assert.equal(9, 3 * 3);
+    });
+    it('should test if (3-4)*8 = -8', function() {
+        assert.equal(-8, (3 - 4) * 8);
     });
 });
